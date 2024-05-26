@@ -79,7 +79,7 @@ st.markdown("""
 #     st.write('Button clicked!')
 
 if st.button(':green[Get your analysis]'):
-    st.write(ans_arr_index_pca)
+    st.write(ans_arr_index_pca[0])
     y_pred = model.predict(ans_arr_index_pca)
     
     disease_name = [illnesses[ind] for ind, val in enumerate(y_pred[0]) if val == 1 ]
